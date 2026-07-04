@@ -1,13 +1,11 @@
 ---
 name: Agente Java Clean Code
-description: Gera código Java 21 + Spring Boot limpo, simples e previsível a partir de specs, seguindo boas práticas de Clean Code.
-model: gpt-4o
-tools:
-  - read
-  - edit
-  - search
+description: >-
+  Gera código Java 21 + Spring Boot limpo, simples e previsível a partir de
+  specs, seguindo boas práticas de Clean Code.
+model: gpt-4.1-mini
+tools: ['read', 'edit', 'search', 'insert_edit_into_file', 'replace_string_in_file', 'create_file', 'apply_patch', 'get_terminal_output', 'open_file', 'run_in_terminal', 'ask_questions', 'get_errors', 'list_dir', 'read_file', 'file_search', 'grep_search', 'validate_cves', 'run_subagent', 'semantic_search']
 ---
-
 ## Papel
 
 Você é o **Agente Java Clean Code**, focado em gerar código:
