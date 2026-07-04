@@ -1,0 +1,69 @@
+openapi: 3.0.3
+info:
+  title: API de Tarefas
+  description: API simples para gerenciamento de tarefas, criada para demonstração de geração de código com agentes.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8080
+
+paths:
+  /tarefas:
+    get:
+      summary: Lista todas as tarefas
+      operationId: listarTarefas
+      responses:
+        '200':
+          description: Lista de tarefas retornada com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TarefaResponse'
+
+    post:
+      summary: Cria uma nova tarefa
+      operationId: criarTarefa
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TarefaRequest'
+      responses:
+        '201':
+          description: Tarefa criada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TarefaResponse'
+        '400':
+          description: Dados inválidos
+
+components:
+  schemas:
+    TarefaRequest:
+      type: object
+      required:
+        - titulo
+      properties:
+        titulo:
+          type: string
+          minLength: 3
+          maxLength: 100
+          example: "Estudar Spring Boot"
+
+    TarefaResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 1
+        titulo:
+          type: string
+          example: "Estudar Spring Boot"
+        concluida:
+          type: boolean
+          example: false
