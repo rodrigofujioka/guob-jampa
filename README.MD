@@ -16,6 +16,11 @@ Este projeto foi montado para mostrar, de forma prática e didática, como usar:
 
 A ideia é gerar código Java 21 com Spring Boot de forma previsível, segura e fácil de manter.
 
+- **Para verificar o código gerado, consulte as duas branchs**   
+  - feature/agent-clean-code  [github-copilot]
+  - feature/agent-professor [github-copilot] 
+  - *obs: Utilize outras IAs para para comparar resultados*  
+
 ---
 
 ## Stack do projeto
