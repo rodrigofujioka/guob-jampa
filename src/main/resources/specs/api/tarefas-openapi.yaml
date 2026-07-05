@@ -52,7 +52,7 @@ components:
           type: string
           minLength: 3
           maxLength: 100
-          example: "Estudar Spring Boot"
+          example: "Se organizar para o GUOB"
 
     TarefaResponse:
       type: object
@@ -63,7 +63,7 @@ components:
           example: 1
         titulo:
           type: string
-          example: "Estudar Spring Boot"
+          example: "Se organizar para o GUOB"
         concluida:
           type: boolean
           example: false
